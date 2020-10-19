@@ -1,0 +1,17 @@
+#:import MapView kivy.garden.mapview.MapView
+
+<BikeLockMapView>:
+    lat:39.9526 #city hall
+    lon:-75.1652#city hall
+    zoom: 18
+    on_zoom:
+        self.zoom = 18 if self.zoom < 18 else self.zoom
+    on_lat:
+        self.find_bike_locks_in_view()
+    on_lon:
+        self.find_bike_locks_in_view()
+
+
+
+
+
